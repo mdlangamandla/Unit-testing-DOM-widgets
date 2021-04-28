@@ -1,4 +1,4 @@
-describe("Test textBill...takes sms or call and return the amount and return an updated amount as more strings are added", ()=>{
+describe("Test textBill that takes sms or call and return the amount and return an updated amount as more strings are added", ()=>{
     it("Should take a string call and return the total of 5 calls.", ()=>{
 
         var callStringTotal = textBillTotal();
