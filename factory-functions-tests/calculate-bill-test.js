@@ -28,5 +28,21 @@ describe("Test calculateBill function using the available cost for billItems (ca
         assert.equal(35.00  ,stringTotal.getbillTotal());  
 
     });
+    
+    it("Should return the total cost of calls and take a string call.", ()=>{
+        let stringTotal = totalPhoneBill();
 
-} )
+        stringTotal.billItemType("call,call,call,call,call,call,call,call");
+
+        assert.equal(22.00 ,stringTotal.getbillTotal());
+    });
+
+    it("Should return the total cost of smses and take a string sms.", ()=>{
+        let stringTotal = totalPhoneBill();
+
+        stringTotal.billItemType("sms,sms,sms,sms,sms,sms,sms,sms,sms,sms")
+
+        assert.equal(7.50 ,stringTotal.getbillTotal());
+    });
+
+} );

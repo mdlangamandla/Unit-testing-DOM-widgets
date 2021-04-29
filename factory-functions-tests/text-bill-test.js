@@ -26,7 +26,7 @@ describe("Test textBill that takes sms or call and return the amount and return 
         callStringTotal.billType('sms')
         callStringTotal.billType('sms')
 
-        // console.log(callStringTotal.getTotalCost());
+       
         
         assert.equal(3.75, callStringTotal.getSmsCostTotal());
         assert.equal(3.75, callStringTotal.getTotalCost());
@@ -34,9 +34,8 @@ describe("Test textBill that takes sms or call and return the amount and return 
 
     })
 
-    it("Should return a warning level class if a warningLevel(orange) is reached.", ()=>{
+    it("Should return a warning level class if a warning level(orange) is reached.", ()=>{
 
-     //   let textBill = textBillTotal();
 
         var callStringTotal = textBillTotal();
         callStringTotal.billType('call')
@@ -56,10 +55,9 @@ describe("Test textBill that takes sms or call and return the amount and return 
         assert.equal("warning", (callStringTotal.getWarningLevel()));
     })
 
-    it("Should return a danger level class if a criticalLevel(red) is reached.", ()=>{
+    it("Should return a danger level class if a critical level(red) is reached.", ()=>{
 
-        //   let textBill = textBillTotal();
-   
+           
            var callStringTotal = textBillTotal();
            callStringTotal.billType('call')
            callStringTotal.billType('call')
@@ -89,5 +87,13 @@ describe("Test textBill that takes sms or call and return the amount and return 
           
            assert.equal("danger", (callStringTotal.getCriticalLevel()));
        })
+
+    it("Should be able to set the warning and critical level.", ()=>{
+        var callStringTotal = textBillTotal();
+        callStringTotal.getWarningLevel(30.00);
+        callStringTotal.getCriticalLevel(50.00);
+
+      
+       })
     
-})
+});
