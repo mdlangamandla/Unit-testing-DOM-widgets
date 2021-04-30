@@ -1,4 +1,4 @@
-describe("Test calculateBill function using the available cost for billItems (call and sms)", ()=>{
+describe("Test calculateBill factory function using the available cost for billItems (call and sms).", ()=>{
     it("Should return the total cost of call/sms and take string both calls and sms.", ()=>{
         let stringTotal = totalPhoneBill();
 

@@ -1,4 +1,4 @@
-describe("Test textBill that takes sms or call and return the amount and return an updated amount as more strings are added", ()=>{
+describe("Test textBill factory function that takes sms or call and return the amount and return an updated amount as more strings are added.", ()=>{
     it("Should take a string call and return the total of 5 calls.", ()=>{
 
         var callStringTotal = textBillTotal();
@@ -8,9 +8,7 @@ describe("Test textBill that takes sms or call and return the amount and return 
         callStringTotal.billType('call')
         callStringTotal.billType('call')
         callStringTotal.billType('0')
-        
-        console.log(callStringTotal.getTotalCost())
-        
+                       
         assert.equal(0, callStringTotal.getSmsCostTotal());
         assert.equal(13.75, callStringTotal.getTotalCost());
         assert.equal(13.75, callStringTotal.getCallCostTotal());

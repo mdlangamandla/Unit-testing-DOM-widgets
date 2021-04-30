@@ -1,4 +1,4 @@
-describe("Test settings bill function", ()=>{
+describe("Test settings bill factory function.", ()=>{
 
     it("Should be able to set the sms cost.", ()=>{
         let settingsBill = BillWithSettings();
